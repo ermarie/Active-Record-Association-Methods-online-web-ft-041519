@@ -15,6 +15,6 @@ class Song < ActiveRecord::Base
     else
       self.artist_id = artist.id
     end
-    self
+    Artist.find_by(id: self.artist_id)
   end
 end
